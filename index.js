@@ -1,4 +1,4 @@
-
+var fire=false;
 window.onload=function(){
 var name=prompt("Miss Birde wants to be your friend. Make a name for yourself. Type your name & press ok to continue. Miss Birde will call u null if u shy your name.");
 alert("chirrup! Miss Birde & "+name+" r conected via Dicee.");
@@ -16,7 +16,9 @@ else if(randomNumber<randomNumber2)
 document.querySelector(".refresh").innerHTML=("🚩 Player 2 Won!");
 else if(randomNumber=randomDice2)
 document.querySelector(".refresh").innerHTML=("It's a draw! 🎲");
-{setTimeout(function(){alert("click on the result of the previous outcome to continue playing");},1500)}}
+setTimeout(time,1500);
+function time(){if(fire===false){alert("click on the result of the previous outcome to continue playing.");} fire=true;} 
+}
 $(".end").mouseover(j);
 function j(){$(".end").html("Assign 2 friends & start playing; btw Miss Birde created this amazing website for u, "+name+" . cheer her by double tapping her feathers.");}
 $(".end").mouseout(k);
